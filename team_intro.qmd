@@ -9,6 +9,8 @@ format: html
 <!-- Everyone: add your name below, one per line. You will likely collide with a teammate
      editing this same list at the same time — that's expected, and it's your first real
      merge conflict. Resolve it together rather than one person overwriting the other. -->
+Sid Chevvan 
+carter lawrence
 ```
 
 - Akshaya
@@ -35,6 +37,32 @@ library(palmerpenguins)
 penguins |> 
   ggplot(aes(x = bill_length_mm)) + 
   geom_histogram(binwidth = 2)
+### \[Sid Chevvan\] — \["BoxPlot"\]
+
+```{r}
+# Make your agreed-upon plot here, e.g.:
+### \[Sid Chevvan\] — \[Body mass of penguins vs species\]
+penguins |> 
+  ggplot(aes(x = species, y = body_mass_g)) +
+  geom_boxplot() +
+  labs(
+    title = "Body mass of penguins based on species",
+    x = "Species",
+    y = "Body Mass"
+  )
+  
+### \[Carter\] — \[Number of Penguins Observed per Year\]
+
+```{r}
+# Make your agreed-upon plot here, e.g.:
+# penguins |> ggplot(aes(x = species, y = body_mass_g, fill = species)) + geom_boxplot()
+penguins |>
+  count(year, species) |>
+  ggplot(aes(x = year, y = n, color = species)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 2) +
+  scale_x_continuous(breaks = c(2007, 2008, 2009)) +
+  labs(x = "Year", y = "Count", color = "Species")
 ```
 
 
