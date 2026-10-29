@@ -13,6 +13,7 @@ Sid Chevvan
 carter lawrence
 ```
 
+- Kruthi
 - Akshaya
 
 ## Team Visualizations
@@ -30,6 +31,13 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
+### \[Kruthi\] — \[Bar Graph - Species count\]
+
+```{r}
+# Make your agreed-upon plot here, e.g.:
+penguins |> 
+  ggplot() +
+  geom_bar(mapping = aes(x = species))
 ### \[Akshaya\] — \[Histogram - Bill Length\]
 
 ```{r}
