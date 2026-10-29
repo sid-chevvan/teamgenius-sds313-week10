@@ -28,11 +28,15 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
-### \[Your Name\] — \[Your Visualization, e.g. "Body Mass by Species"\]
+### \[Akshaya\] — \[Histogram - Bill Length\]
 
 ```{r}
 # Make your agreed-upon plot here, e.g.:
-# penguins |> ggplot(aes(x = species, y = body_mass_g, fill = species)) + geom_boxplot()
+penguins |> 
+  ggplot(aes(x = bill_length_mm)) + 
+  geom_histogram(binwidth = 2)
 ```
+
+
 
 
