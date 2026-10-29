@@ -28,7 +28,7 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
-### \[Kruthi\] — \[Species count\]
+### \[Kruthi\] — \[Bar Graph - Species count\]
 
 ```{r}
 # Make your agreed-upon plot here, e.g.:
