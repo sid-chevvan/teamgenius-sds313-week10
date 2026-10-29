@@ -27,9 +27,16 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
-### \[Your Name\] — \[Your Visualization, e.g. "Body Mass by Species"\]
+### \[Carter\] — \[Number of Penguins Observed per Year\]
 
 ```{r}
 # Make your agreed-upon plot here, e.g.:
 # penguins |> ggplot(aes(x = species, y = body_mass_g, fill = species)) + geom_boxplot()
+penguins |>
+  count(year, species) |>
+  ggplot(aes(x = year, y = n, color = species)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 2) +
+  scale_x_continuous(breaks = c(2007, 2008, 2009)) +
+  labs(x = "Year", y = "Count", color = "Species")
 ```
